@@ -1,0 +1,28 @@
+{% extends 'base.html' %} 
+{% load static %} 
+
+{% block head_title %}Recipe Sharing{% endblock %} {% block content %}
+<div class="flex flex-col items-center"><h1 class="font-bold font-serif  text-white text-5xl text-white mt-4">Welcome to Recipe Sharing</h1></div>
+
+<div class="container mx-auto flex flex-col md:flex-row items-center my-2 ">
+
+    
+    <div class="flex flex-col w-full lg:w-1/2 justify-center items-start pt-5 pb-24 px-6 bg-white rounded-2xl bg-opacity-70 mx-3">
+        <h1 class="font-bold text-3xl my-4">Our Favorite Food Sharing Sites (2024)</h1>
+        <p class="leading-normal mb-4 ">
+            As a recipe creator, you can submit your recipes to these food sharing sites, and then these sites will display and feature those recipes. These food sharing sites are all a little different, but submitting your content to them can be part of an effective traffic-building strategy, especially when you’re just starting out.
+            <br><br>
+            One quick note before we dive in — over the years, many food sharing sites have come and gone. Even Foodgawker isn’t the most reliable any more (the site is often down). These days, many social media platforms (like Pinterest) perform similar functions to the food sharing sites of yesteryear.
+            <br><br>
+            That being said, before you start submitting your recipes to a food sharing site, it’s important to check when the most recent posts on the site are dated. If there aren’t any recipes posted within the last month or so, don’t waste your time!
+        </p>
+        <div class="flex justify-end w-full mt-5">
+            <a  href="{% url 'register' %}" class="bg-blue-900 text-white rounded-none hover:bg-white hover:text-blue-900 hover:border-blue-900 shadow hover:shadow-lg py-2 px-4 border border-gray-900 hover:border-transparent">Register</a>
+        </div>
+    </div>
+    <div class="w-full lg:w-1/2 lg:py-6 text-center ">
+        <img class="rounded-2xl" src="{% static 'login.avif' %}" alt="Login Image">
+    </div>
+</div>
+
+{% endblock %}

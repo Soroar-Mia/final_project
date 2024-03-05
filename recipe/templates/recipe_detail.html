@@ -1,0 +1,32 @@
+{% extends 'base.html' %}  {% block content %}
+
+
+
+
+<div class="flex justify-center   bg-white border border-gray-200 rounded-lg shadow  mt-2">
+    
+<div class="w-2/4">
+  <div >
+    <img class="object-cover w-full p-3 " src="{{recipe.image.url}}" alt="">
+  </div>
+  <div class="flex flex-col justify-between p-4 leading-normal">
+      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{recipe.recipe_name}}</h5>
+      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Recipe ID :{{recipe.id}}</p>
+      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{recipe.description}}</p>
+  </div>
+  <div class="flex flex-col justify-between p-4 leading-normal">
+    <h3 class="mb-3 font-normal text-gray-700 dark:text-gray-400">Customer Reviews</h3>
+    <h4 class="mb-3 font-normal text-gray-700 dark:text-gray-400">Mike John</h4>
+    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+        
+        Dummy comment Lorem ipsum dolor sit amet, consectetur
+              adipisicing elit, sed do eiusmod tempor incididunt ut labore
+              et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+              exercitation ullamco laboris nisi ut aliquip
+      </p>
+    </div>
+</div>
+
+  </div>
+
+{% endblock %}

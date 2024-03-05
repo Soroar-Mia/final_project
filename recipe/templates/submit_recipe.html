@@ -1,0 +1,66 @@
+{% extends 'base.html' %}  {% block content %}
+
+<div class="bg-white ml-40 mr-40 mb-20 mt-20 px-3 py-4 rounded-xl my-6">
+    <h1 class="font-bold text-3xl text-center pb-5">Submit Recipe</h1>
+    <div class="w-full mt-10">
+        <form method="post" enctype="multipart/form-data" class=" shadow-md rounded px-8 pt-2 pb-8 mb-2">
+            {% csrf_token %} 
+            <div class="flex flex-wrap -mx-3 mb-6">
+                <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="{{ form.id.id_for_label }}">
+                        {{ form.id.label }}
+                    </label> 
+                    {{ form.id }}
+
+                </div>
+            </div>
+
+
+            <div class="flex flex-wrap -mx-3 mb-6">
+                <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="{{ form.recipe_name.id_for_label }}">
+                        {{ form.recipe_name.label }}
+                    </label> 
+                    {{ form.recipe_name }}
+
+                </div>
+            </div>
+
+
+            <div class="flex flex-wrap mx-3 mb-6">
+                <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="{{ form.description.id_for_label }}">
+                        {{ form.description.label }}
+                    </label> 
+                    {{ form.description }}
+                </div>
+            </div>
+
+    
+            <div class="flex flex-wrap mx-3 mb-6">
+                <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="{{ form.image.id_for_label }}">
+                        {{ form.image.label }}
+                    </label>  
+                    {{ form.image }}
+                </div>
+            </div>
+            <div class="flex flex-wrap -mx-3 mb-6">
+                <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="{{ form.category.id_for_label }}">
+                        {{ form.category.label }}
+                    </label> 
+                    {{ form.category }}
+                </div>
+            </div>
+
+
+            <div class="flex items-center justify-between">
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                    Submit
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
